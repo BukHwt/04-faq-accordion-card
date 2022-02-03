@@ -1,0 +1,123 @@
+/* resets */
+body,
+h1,
+ul,
+h2 {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  background: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  background-color: white;
+  width: 80%;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url("images/bg-pattern-mobile.svg");
+  background-repeat: no-repeat;
+  background-size: 300px;
+  background-position-x: center;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 55px;
+}
+
+.image-container {
+  height: 150px;
+}
+
+.faq-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.faq-mobile-art {
+  position: relative;
+  bottom: 130px;
+  width: 300px;
+}
+
+.faq-list {
+  margin: 20px;
+}
+
+.faq-list-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid hsl(240, 5%, 91%);
+  padding: 15px 10px;
+}
+
+.faq-list-item h2 {
+  font-weight: 400;
+}
+
+.faq-desktop-art,
+.desktop-box {
+  display: none;
+}
+
+@media only screen and (min-width: 1440px) {
+  main {
+    flex-direction: row;
+    background-image: url("images/bg-pattern-desktop.svg");
+    background-size: 1000px;
+    background-position: -500px -250px;
+    height: 650px;
+  }
+
+  .faq-container,
+  .image-container {
+    flex: 1;
+  }
+
+  .faq-mobile-art {
+    display: none;
+  }
+
+  .image-container {
+    display: flex;
+    align-items: center;
+  }
+
+  /* .desktop-assets-container {
+    position: relative;
+    height: 100%;
+    width: 100%;
+  } */
+
+  .faq-desktop-art,
+  .desktop-box {
+    display: block;
+  }
+
+  .faq-desktop-art {
+    object-position: right;
+    object-fit: cover;
+    width: 500px;
+    height: 450px;
+  }
+
+  .desktop-box {
+    position: absolute;
+    bottom: 350px;
+    left: 75px;
+  }
+}
